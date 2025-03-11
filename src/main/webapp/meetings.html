@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tremont Borough Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section class ="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Tremont.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="contacts.html">COMMUNITY CONTACTS</a></li>
+                        <li><a href="forms.html">FORMS / ORDINANCES</a></li>
+                        <li><a href="meetings.html">MEETINGS</a></li>
+                    </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Meetings</h1>
+    </section>
+
+<!------ meetings content ------->
+    <section class="meetings-head">
+        <h1>Council Meetings</h1>
+        <ul>
+            <li>Worskhop Meetings are held the 1st Tuesday of every Month</li>
+            <li>Regular Council Meetings are held the 2nd Tuesday of every month</li>
+            <li>All meetings are open to the public and are held at 6:30 p.m. at the Tremont Borough Building, 139 Clay Street, Tremont</li>
+            <li>Special meetings and/or workshops will be duly posted and/or advertised</li>
+        </ul>
+    </section>
+
+    <section class="calendar-section">
+      <div id="calendar-root"></div>
+    </section>
+
+    <section class="meetings-drop">
+      <h1>2024 Minutes</h1>
+      <div class="dropdown">
+          <button class="dropbtn">January</button>
+          <div class="dropdown-content">
+            <a href="images/Reorganization Minutes -January 2024.pdf">View Document</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">February</button>
+          <div class="dropdown-content">
+            <i>No Content</i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">March</button>
+          <div class="dropdown-content">
+            <a href="images/Minutes -March 2024.pdf">View Document</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">April</button>
+          <div class="dropdown-content">
+            <a href="images/April 2024 Meeting  Minutes -.pdf">View Document</a> 
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">May</button>
+          <div class="dropdown-content">
+            <a href="images/May 2024 Meeting Minutes -.pdf">View Document</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">June</button>
+          <div class="dropdown-content">
+            <a href="images/June 2024 Meeting Minutes -.pdf">View Document</a> 
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">July</button>
+          <div class="dropdown-content">
+            <a href="images/July 2024 Meeting Minutes -.pdf">View Document</a>
+            
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">August</button>
+          <div class="dropdown-content">
+             <a href="images/August 2024 Meeting Minutes -.pdf">View Document</a> 
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">September</button>
+          <div class="dropdown-content">
+            <a href="images/September 2024 Meeting Minutes -.pdf">View Document</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">October</button>
+          <div class="dropdown-content">
+            <a href="images/October 2024 Meeting Minutes -.pdf">View Document</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">November</button>
+          <div class="dropdown-content">
+            <a href="images/November 2024 Meeting Minutes -.pdf">View Document</a> 
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">December</button>
+          <div class="dropdown-content">
+                <a href="images/2024 Minutes - December 10.pdf">View Document</a>
+          </div>
+        </div>
+
+        <!-- 2025 Minutes-->
+        <h1>2025 Minutes</h1>
+        <div class="dropdown">
+            <button class="dropbtn">January</button>
+            <div class="dropdown-content">
+              <a href="images/2025 Minutes - January 14.pdf">View Document</a>
+            </div>
+          </div>
+
+
+
+
+    </section>
+
+
+
+<!------- Footer -------->
+<section class="footer">
+    <p>
+        Website Design by Andrew Ochs <br>
+        Hosted by Schuyl, Inc.
+    </p>
+</section>
+
+
+<!-------JavaScript for Toggle Menu------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    // Calendar Component
+    const MeetingCalendar = () => {
+        const [currentDate, setCurrentDate] = React.useState(new Date());
+        
+        // Meeting dates data
+        const meetingDates = {
+            workshop: {
+                1: 7,  // January
+                2: 4,  // February
+                3: 4,  // March
+                4: 1,  // April
+                5: 6,  // May
+                6: 3,  // June
+                7: 1,  // July
+                8: 5,  // August
+                9: 2,  // September
+                10: 7, // October
+                11: 4, // November
+                12: 2  // December
+            },
+            regular: {
+                1: 14,  // January
+                2: 11,  // February
+                3: 11,  // March
+                4: 8,   // April
+                5: 13,  // May
+                6: 10,  // June
+                7: 8,   // July
+                8: 12,  // August
+                9: 9,   // September
+                10: 14, // October
+                11: 11, // November
+                12: 9   // December
+            }
+        };
+
+        const specialEvents = [
+            {
+            date: new Date(2025, 2, 10), // March 10, 2025 (month is 0-indexed, so 2 = March)
+            title: "Sealed Proposals Due for 2025 Road Project"
+            }
+        ];
+
+        const getDaysInMonth = (date) => {
+            return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+        };
+
+        const getFirstDayOfMonth = (date) => {
+            return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+        };
+
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const nextMonth = () => {
+            setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1));
+        };
+
+        const prevMonth = () => {
+            setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1));
+        };
+
+        return (
+            <div style={{
+                maxWidth: '800px',
+                margin: '0 auto',
+                padding: '20px',
+                fontFamily: 'Arial, sans-serif'
+            }}>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginBottom: '20px'
+                }}>
+                    <button 
+                        onClick={prevMonth}
+                        style={{
+                            padding: '8px 16px',
+                            border: '1px solid #ddd',
+                            borderRadius: '4px',
+                            background: '#fff',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        ←
+                    </button>
+                    <h2 style={{ margin: 0 }}>
+                        {months[currentDate.getMonth()]} {currentDate.getFullYear()}
+                    </h2>
+                    <button 
+                        onClick={nextMonth}
+                        style={{
+                            padding: '8px 16px',
+                            border: '1px solid #ddd',
+                            borderRadius: '4px',
+                            background: '#fff',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        →
+                    </button>
+                </div>
+
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(7, 1fr)',
+                    gap: '1px',
+                    background: '#ddd',
+                    border: '1px solid #ddd'
+                }}>
+                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                        <div key={day} style={{
+                            padding: '10px',
+                            background: '#f0f0f0',
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }}>
+                            {day}
+                        </div>
+                    ))}
+                    
+                    {Array.from({ length: getFirstDayOfMonth(currentDate) }).map((_, i) => (
+                        <div key={`empty-${i}`} style={{
+                            padding: '10px',
+                            background: '#fff'
+                        }}></div>
+                    ))}
+                    
+                    {Array.from({ length: getDaysInMonth(currentDate) }).map((_, i) => {
+                        const day = i + 1;
+                        const currentMonth = currentDate.getMonth() + 1;
+                        const currentYear = currentDate.getFullYear();
+                        const isWorkshopMeeting = day === meetingDates.workshop[currentMonth];
+                        const isRegularMeeting = day === meetingDates.regular[currentMonth];
+                        
+                        //Check for Special Events
+                        const matchingEvent = specialEvents.find(event => 
+                            event.date.getDate() === day && 
+                            event.date.getMonth() === currentDate.getMonth() &&
+                            event.date.getFullYear() === currentDate.getFullYear()
+                        );
+
+                        return (
+                            <div key={day} style={{
+                                padding: '10px',
+                                background: isWorkshopMeeting ? '#e3f2fd' : 
+                                           isRegularMeeting ? '#e8f5e9' : '#fff',
+                                textAlign: 'center',
+                                position: 'relative',
+                                minHeight: matchingEvent ? '80px' : '60px'
+                            }}>
+                                {day}
+                                {isWorkshopMeeting && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: matchingEvent ? '22px' : '2px',
+                                        left: '2px',
+                                        right: '2px',
+                                        fontSize: '10px',
+                                        background: '#bbdefb',
+                                        padding: '2px',
+                                        borderRadius: '2px'
+                                    }}>
+                                        Workshop
+                                    </div>
+                                )}
+                                {isRegularMeeting && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: matchingEvent ? '22px' : '2px',
+                                        left: '2px',
+                                        right: '2px',
+                                        fontSize: '10px',
+                                        background: '#c8e6c9',
+                                        padding: '2px',
+                                        borderRadius: '2px'
+                                    }}>
+                                        Regular
+                                    </div>
+                                )}
+                                {matchingEvent && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '2px',
+                                        left: '2px',
+                                        right: '2px',
+                                        fontSize: '10px',
+                                        background: '#ffe082',
+                                        padding: '2px',
+                                        borderRadius: '2px'
+                                    }}>
+                                        {matchingEvent.title}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+                
+                <div style={{ marginTop: '20px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+                        <div style={{ width: '16px', height: '16px', background: '#e3f2fd', marginRight: '8px' }}></div>
+                        <span>Workshop Meeting (First Tuesday, 6:30 PM)</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ width: '16px', height: '16px', background: '#e8f5e9', marginRight: '8px' }}></div>
+                        <span>Regular Meeting (Second Tuesday, 6:30 PM)</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ width: '16px', height: '16px', background: '#fff0c8', marginRight: '8px' }}></div>
+                        <span>Special Events</span>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    // Initialize the calendar
+    const root = ReactDOM.createRoot(document.getElementById('calendar-root'));
+    root.render(<MeetingCalendar />);
+</script>
+
+<!-- Your existing JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

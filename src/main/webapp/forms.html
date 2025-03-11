@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tremont Borough Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section class ="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Tremont.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="contacts.html">COMMUNITY CONTACTS</a></li>
+                        <li><a href="forms.html">FORMS / ORDINANCES</a></li>
+                        <li><a href="meetings.html">MEETINGS</a></li>
+                    </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Forms / Ordinances</h1>
+    </section>
+
+<!------ forms content ------->
+
+<section class="forms">
+    <h1>Forms:</h1>
+    <div class ="forms-column">
+        <h1>Public Complaint Form</h1>
+            <a href="images/PUBLIC COMPLAINT FORM.pdf" class="btn-forms">View/Print Document</a>
+    </div>
+    <div class ="forms-column">
+        <h1>Dumpster Permit Application</h1>
+            <a href="images/Tremont Borough Dumpster Permit Application.pdf" class="btn-forms">View/Print Document</a>
+    </div>
+    <div class ="forms-column">
+        <h1>Handicap Parking Sign Application</h1>
+            <a href="images/HANDICAPPED SIGN INITIAL APPLICATION.pdf" class="btn-forms">View/Print Document</a>
+    </div>
+    <div class ="forms-column">
+        <h1>Notice of Residential Occupancy</h1>
+            <a href="images/Tremont Borough Notice of Residential Occupancy Form.pdf" class="btn-forms">View/Print Document</a>
+    </div>
+    <div class ="forms-column">
+        <h1>Special Event Property Rental Form</h1>
+            <a href="images/Special Event Property Rental Form.pdf" class="btn-forms">View/Print Document</a>
+    </div>
+    <div class ="forms-column">
+        <h1>Athletic Property Rental Form</h1>
+            <a href="images/Athletic Property Rental Form-pdf (3).pdf" class="btn-forms">View/Print Document</a>
+    </div>
+</section>
+
+<section class="ordinances">
+    <h1>Ordinances:</h1>
+    <div class="ordinances-row">
+        <div class="ordinances-col">
+            <h3>Quality of Life (2013):</h3>
+            <p>
+                <a href="images/QUALITY-OF-LIFE-Ordinance No 2013-03 (final).pdf" class="btn-ordinances">View/Print Document</a>
+            </p>
+        </div>
+        <div class="ordinances-col">
+            <h3>Quality of Life (2018):</h3>
+            <p>
+                <a href="images/Ordinance 2018-03-Amended QOL Ordinance  - Curfew.pdf" class="btn-ordinances">View/Print Document</a>
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- New Ordinances here-->
+    <div class="ordinances-row">
+        <div class="ordinances-col">
+            <h3>Dumpster Ordinance # 2007-4:</h3>
+            <p>
+                <a href="images/Dumpster Ordinance No. 2007-4.pdf" class="btn-ordinances">View/Print Document</a>
+            </p>
+        </div>
+        <div class="ordinances-col">
+            <h3>Landlord Ordinance #3-93:</h3>
+            <p>
+                <a href="images/3-93 Landlords.pdf" class="btn-ordinances">View/Print Document</a>
+            </p>
+        </div>
+    </div>
+    <div class="ordinances-row">
+        <div class="ordinances-col">
+            <h3>Livestock & Fowl Ordinance #2023-02:</h3>
+            <p>
+                <a href="images/Ordinance 2023-02 -Prohibiting Livestock or Fowls (Animal Ordinance).pdf" class="btn-ordinances">View/Print Document</a>
+            </p>
+        </div>
+        <div class="ordinances-col">
+            <!-- This column intentionally left empty for alignment -->
+        </div>
+    </div>
+
+
+
+<!------- Footer -------->
+<section class="footer">
+    <p>
+        Website Design by Andrew Ochs <br>
+        Hosted by Schuyl, Inc.
+    </p>
+</section>
+
+
+<!-------JavaScript for Toggle Menu------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
