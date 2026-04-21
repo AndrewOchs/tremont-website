@@ -3,17 +3,20 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tremont Borough Website</title>
+    <title>Tremont Borough</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- Hero -->
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/Tremont.png"></a>
@@ -28,22 +31,21 @@
             </div>
             <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
-
         <div class="text-box">
             <h1>Tremont Borough</h1>
-            <p>Population of 1,672 (2020 Census) <br>Incorporated in 1866</p>
+            <p>Population of 1,672 (2020 Census) &bull; Incorporated in 1866</p>
             <a href="https://www.facebook.com/tremontborough/" class="fb-btn">Visit Our Facebook Page</a>
         </div>
-
     </section>
 
-    <!------ Borough News Section ------->
-
+    <!-- Borough News -->
     <section class="news-section">
-        <h1>Borough News</h1>
+        <div class="page-section-intro">
+            <h2>Borough News</h2>
+        </div>
 
         <div class="news-item">
-            <h2>ICE DETENTION CENTER</h2>
+            <h2>ICE Detention Center</h2>
             <div class="news-content">
                 <p>The planned ICE Detention Center is located in Tremont Township NOT Tremont Borough.
                     All questions, concerns, interview requests, R-T-K request, etc., should be directed to the Tremont
@@ -54,89 +56,118 @@
         </div>
 
         <div class="news-item">
-            <h2>ASHES & YARD WASTE</h2>
+            <h2>Ashes &amp; Yard Waste</h2>
             <div class="news-content">
                 <p>The Borough will pick up ashes and bagged leaves / yard waste every Monday morning starting April 20,
-                    2026</p>
+                    2026.</p>
             </div>
         </div>
     </section>
-    <!------ About ------->
 
-    <section class="about">
-        <div class="about-container">
-            <h1>About Us</h1>
-            <p>
-                Tremont, Pennsylvania, nestled in the scenic landscapes of Schuylkill County,
-                is a historic borough with a rich heritage. Located in the northeastern part of the state, Tremont
-                offers a charming small-town
-                atmosphere and serves as a reminder of Pennsylvania's unique history.
-            </p>
-            <img src="images/TremontBoroughSign.png">
+    <!-- About -->
+    <section class="about-section">
+        <div class="page-section-intro">
+            <h2>About Tremont Borough</h2>
+            <p>Nestled in the scenic landscapes of Schuylkill County, Tremont is a historic borough with a rich
+                heritage, offering a charming small-town atmosphere and serving as a reminder of Pennsylvania's unique
+                history.</p>
         </div>
 
-        <div class="row">
-            <div class="about-col">
-                <h3><u>Elected Officials:</u></h3>
-                <p>
-                    <b>Mayor:</b> Justin Moeller <br>
-                    <b>Council President:</b> Roger D. Adams <br>
-                    <b>Council Vice President:</b> William Ochs <br>
-                    <b>Council Members:</b> Brian Eisenacher, <br>James Scheibley, <br> and Melody Strickler<br>
-                    <b>Tax Collector:</b> Kathleen Krammes <br>
-                </p>
-            </div>
-            <div class="about-col">
-                <h3><u>Affiliates:</u></h3>
-                <p>
-                    <b>Solicitor:</b> Atty Shane Hobbs <br>
-                    <b>Health & Safety Officer:</b> Lewis Moyer <br>
-                    <b>Emergency Management Coordinator:</b> James Scheibley <br>
-                    <b>Code Enforcement Officer:</b> Luis Negron, <br> Systems Design Engineering, INC <br>
-                    <b>Engineer:</b> John Poff, <br> Systems Design Engineering, INC <br>
-                    <b>Police:</b> State Police, Schuylkill Haven Barricks <br>
-                </p>
-            </div>
-            <div class="about-col">
-                <h3><u>Employees:</u></h3>
-                <p>
-                    <b>Secretary & Treasurer:</b> Shea Lucas<br>
-                    <b>Interim Road Master:</b> Lewis Kohr <br>
-                    <b>Road Laborer:</b> Nicolas Mindler <br>
-                    <b>Part-Time Seasonal Laborer:</b> David Barry <br>
-                    <b>Custodian:</b> George Hoverocker <br>
-                    <b>Librarian:</b> Bonnie Wiscount Marks <br>
-                    <b>Library Aide:</b> Dorothy Rowe-Feugeas <br>
-                </p>
-            </div>
+        <div class="about-section-image">
+            <img src="images/TremontBoroughSign.png" alt="Tremont Borough Sign">
         </div>
 
-        <div class="about-col">
-            <h1><u>Borough Office Info:</u></h1>
-            <ul>
-                <li>Located in the Borough Building</li>
-                <li>139 Clay Street, Suite 1, Tremont</li>
-                <li><b>Hours:</b> 9:00 am - 5:00 pm Monday - Friday</li>
-                <li><b>Phone:</b> 570-695-2199</li>
-                <li><b>Fax:</b> 570-695-2232</li>
-                <li><b>Email:</b> boroughoffice@tremontborough.org</li>
-            </ul>
+        <!-- Officials / Affiliates / Employees -->
+        <div class="about-officials-grid">
+
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-card-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Elected Officials</h3>
+                </div>
+                <div class="about-card-body">
+                    <b>Mayor:</b> Justin Moeller<br>
+                    <b>Council President:</b> Roger D. Adams<br>
+                    <b>Council Vice President:</b> William Ochs<br>
+                    <b>Council Members:</b> Brian Eisenacher,
+                    James Scheibley, and Melody Strickler<br>
+                    <b>Tax Collector:</b> Kathleen Krammes
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Affiliates</h3>
+                </div>
+                <div class="about-card-body">
+                    <b>Solicitor:</b> Atty Shane Hobbs<br>
+                    <b>Health &amp; Safety Officer:</b> Lewis Moyer<br>
+                    <b>Emergency Management Coordinator:</b> James Scheibley<br>
+                    <b>Code Enforcement Officer:</b> Luis Negron,
+                    Systems Design Engineering, INC<br>
+                    <b>Engineer:</b> John Poff,
+                    Systems Design Engineering, INC<br>
+                    <b>Police:</b> State Police, Schuylkill Haven Barricks
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-card-icon"><i class="fas fa-users"></i></div>
+                    <h3>Employees</h3>
+                </div>
+                <div class="about-card-body">
+                    <b>Secretary &amp; Treasurer:</b> Shea Lucas<br>
+                    <b>Interim Road Master:</b> Lewis Kohr<br>
+                    <b>Road Laborer:</b> Nicolas Mindler<br>
+                    <b>Part-Time Seasonal Laborer:</b> David Barry<br>
+                    <b>Custodian:</b> George Hoverocker<br>
+                    <b>Librarian:</b> Bonnie Wiscount Marks<br>
+                    <b>Library Aide:</b> Dorothy Rowe-Feugeas
+                </div>
+            </div>
+
         </div>
 
-        <div class="about-col">
-            <h2><u>Borough Garage / Street Department Info:</u></h2>
-            <ul>
-                <li>Located on Bill Mindler Drive (Middlecreek)</li>
-                <li><b>Hours:</b> 6:00 am - 2:00 pm</li>
-                <li><b>Phone:</b> 570-695-2709</li>
-                <li>Ash Pick-up Monday mornings</li>
-                <li>Yard Waste Pick Up Monday mornings (May – Mid November)</li>
-            </ul>
+        <!-- Office / Garage info -->
+        <div class="office-info-grid">
+
+            <div class="office-info-card">
+                <div class="office-info-card-header">
+                    <div class="office-info-card-icon"><i class="fas fa-building"></i></div>
+                    <h3>Borough Office Info</h3>
+                </div>
+                <ul class="office-info-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>139 Clay Street, Suite 1, Tremont</span></li>
+                    <li><i class="fas fa-clock"></i><span><b>Hours:</b> 9:00 am &ndash; 5:00 pm, Monday &ndash;
+                            Friday</span></li>
+                    <li><i class="fas fa-phone"></i><span><b>Phone:</b> 570-695-2199</span></li>
+                    <li><i class="fas fa-fax"></i><span><b>Fax:</b> 570-695-2232</span></li>
+                    <li><i class="fas fa-envelope"></i><span><b>Email:</b>
+                            boroughoffice@tremontborough.org</span></li>
+                </ul>
+            </div>
+
+            <div class="office-info-card">
+                <div class="office-info-card-header">
+                    <div class="office-info-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Borough Garage / Street Dept.</h3>
+                </div>
+                <ul class="office-info-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Bill Mindler Drive (Middlecreek)</span></li>
+                    <li><i class="fas fa-clock"></i><span><b>Hours:</b> 6:00 am &ndash; 2:00 pm</span></li>
+                    <li><i class="fas fa-phone"></i><span><b>Phone:</b> 570-695-2709</span></li>
+                    <li><i class="fas fa-trash-alt"></i><span>Ash pick-up Monday mornings</span></li>
+                    <li><i class="fas fa-leaf"></i><span>Yard waste pick-up Monday mornings (May &ndash; Mid
+                            November)</span></li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
     <!------- Footer -------->
-
     <section class="footer">
         <p>
             Website Design by Andrew Ochs <br>
@@ -144,12 +175,8 @@
         </p>
     </section>
 
-
-
-
     <!-------JavaScript for Toggle Menu------->
     <script>
-
         var navLinks = document.getElementById("navLinks");
         function showMenu() {
             navLinks.style.right = "0";
